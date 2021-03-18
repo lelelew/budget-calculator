@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { useItems } from "./hooks/use-items";
 
 function App() {
+  const itemsList = useItems();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+      {itemsList.map((item, index) => (
+        <p key={`${item.type} ${item.name} ${index}`}>
+          {item.type}
+          {item.name}
+          {item.lowPrice}
+          {item.highPrice}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      ))}
     </div>
   );
 }
