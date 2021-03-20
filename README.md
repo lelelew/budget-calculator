@@ -4,7 +4,7 @@ A simple budget calculator that allows a user to choose items from different cat
 
 ## Stories
 
-- [ ] As a user, I want to see a list of available items and item types, so that I can choose the items I'm interested in.
+- [x] As a user, I want to see a list of available items and item types, so that I can choose the items I'm interested in.
 - [ ] As a user, when I add an item, then I want my subtotal to update, so that I can see my order total.
 - [ ] As company, we only allow one item per type to be selected at a given time.
 - [ ] As a user, I want to enter my budget, so that I can see if my preferences match my budget.
@@ -13,11 +13,11 @@ A simple budget calculator that allows a user to choose items from different cat
 
 ## Tasks
 
-- [ ] Pull item data from Firebase and make available via a service/ hook
-- [ ] Create a top level budget calculator component
-- [ ] Create a component to display the entire item options
-- [ ] Create a component to display items from a particular given type
-- [ ] Create a component to display a single item
+- [x] Pull item data from Firebase and make available via a service/ hook
+- [x] Create a top level budget calculator component
+- [x] Create a component to display the entire item options
+- [x] Create a component to display items from a particular given type
+- [x] Create a component to display a single item
 - [ ] Create a context/reducer or state to save the selected items
 - [ ] When an item in a given type is clicked, add it to the state for that item type
 - [ ] When an item in a given type is unchecked, remove it from the state for that item type
