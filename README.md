@@ -18,10 +18,10 @@ A simple budget calculator that allows a user to choose items from different cat
 - [x] Create a component to display the entire item options
 - [x] Create a component to display items from a particular given type
 - [x] Create a component to display a single item
-- [ ] Create a context/reducer or state to save the selected items
-- [ ] When an item in a given type is clicked, add it to the state for that item type
+- [x] Create a context/reducer or state to save the selected items
+- [x] When an item in a given type is clicked, add it to the state for that item type
 - [ ] When an item in a given type is unchecked, remove it from the state for that item type
-- [ ] If a different item from a given type is clicked, replace the item with the existing item
+- [x] If a different item from a given type is clicked, replace the item with the existing item
 - [ ] Display live minimum total of all items selected
 - [ ] Display live maximum total of all items selected
 - [ ] Display list of all items currently selected by user
