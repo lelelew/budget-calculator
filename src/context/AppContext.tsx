@@ -7,22 +7,33 @@ interface State {
 }
 
 interface Action {
-  type: "ADD_ITEM";
-  payload: Item;
+  type: "ADD_ITEM" | "SET_BUDGET";
+  payload?: Item;
+  budget?: number;
 }
 
 const AppReducer = (state: State, action: Action) => {
   console.log("AppReducer", state, action);
   switch (action.type) {
-    case "ADD_ITEM":
+    case "ADD_ITEM": {
       const newState = {
         ...state,
       };
-
-      const itemType = action.payload.type;
-
-      newState.chosenItems[itemType] = action.payload;
+      if (action.payload) {
+        const itemType = action.payload.type;
+        newState.chosenItems[itemType] = action.payload;
+      }
       return newState;
+    }
+    case "SET_BUDGET": {
+      const newState = {
+        ...state,
+      };
+      if (action.budget) {
+        newState.budget = action.budget;
+      }
+      return newState;
+    }
 
     default:
       return state;
