@@ -13,7 +13,7 @@ interface Action {
 }
 
 const AppReducer = (state: State, action: Action) => {
-  console.log("AppReducer", state, action);
+  // console.log("AppReducer", state, action);
   switch (action.type) {
     case "ADD_ITEM": {
       const newState = {
@@ -34,22 +34,14 @@ const AppReducer = (state: State, action: Action) => {
       }
       return newState;
     }
-
     default:
       return state;
   }
 };
 
 const initialState = {
-  budget: 200000,
-  chosenItems: {
-    GROUND_COVER: {
-      type: "GROUND_COVER",
-      name: "Pavers",
-      lowPrice: 400000,
-      highPrice: 800000,
-    },
-  },
+  budget: 100000,
+  chosenItems: {},
 };
 
 export const AppContext = createContext<{

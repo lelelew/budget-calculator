@@ -5,10 +5,10 @@ A simple budget calculator that allows a user to choose items from different cat
 ## Stories
 
 - [x] As a user, I want to see a list of available items and item types, so that I can choose the items I'm interested in.
-- [ ] As a user, when I add an item, then I want my subtotal to update, so that I can see my order total.
-- [ ] As company, we only allow one item per type to be selected at a given time.
-- [ ] As a user, I want to enter my budget, so that I can see if my preferences match my budget.
-- [ ] As a user, when my selections exceed my budget, then I want to see a warning, so that I know I need to adjust my preferences.
+- [x] As a user, when I add an item, then I want my subtotal to update, so that I can see my order total.
+- [x] As company, we only allow one item per type to be selected at a given time.
+- [x] As a user, I want to enter my budget, so that I can see if my preferences match my budget.
+- [x] As a user, when my selections exceed my budget, then I want to see a warning, so that I know I need to adjust my preferences.
 - [ ] As a user, I want to save my budget, so that I can keep my budget preferences in my profile.
 
 ## Tasks
@@ -22,12 +22,12 @@ A simple budget calculator that allows a user to choose items from different cat
 - [x] When an item in a given type is clicked, add it to the state for that item type
 - [ ] When an item in a given type is unchecked, remove it from the state for that item type
 - [x] If a different item from a given type is clicked, replace the item with the existing item
-- [ ] Display live minimum total of all items selected
-- [ ] Display live maximum total of all items selected
-- [ ] Display list of all items currently selected by user
-- [ ] Allow user to set a budget
-- [ ] Color code budget based on whether selected items are above/ below/ or within range
-- [ ] Allow user to edit their budget
+- [x] Display live minimum total of all items selected
+- [x] Display live maximum total of all items selected
+- [x] Display list of all items currently selected by user
+- [x] Allow user to set a budget
+- [x] Color code budget based on whether selected items are above/ below/ or within range
+- [x] Allow user to edit their budget
 - [ ] Allow user to submit their item preferences and budget
 - [ ] Iterate on design
 
