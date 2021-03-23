@@ -7,7 +7,7 @@ interface State {
 }
 
 interface Action {
-  type: "ADD_ITEM" | "SET_BUDGET";
+  type: "ADD_ITEM" | "SET_BUDGET" | "DELETE_ITEM";
   payload?: Item;
   budget?: number;
 }
@@ -22,6 +22,16 @@ const AppReducer = (state: State, action: Action) => {
       if (action.payload) {
         const itemType = action.payload.type;
         newState.chosenItems[itemType] = action.payload;
+      }
+      return newState;
+    }
+    case "DELETE_ITEM": {
+      const newState = {
+        ...state,
+      };
+      if (action.payload) {
+        const itemType = action.payload.type;
+        delete newState.chosenItems[itemType];
       }
       return newState;
     }
@@ -40,7 +50,7 @@ const AppReducer = (state: State, action: Action) => {
 };
 
 const initialState = {
-  budget: 100000,
+  budget: 0,
   chosenItems: {},
 };
 

@@ -175,14 +175,14 @@ export const BudgetSummary: React.FC<Props> = (props) => {
       </div>
       <Divider variant="middle" className={classes.addMargin} />
       <div>
-        <p>
+        <div>
           Price Range of Chosen Items:
           <br />
           <Typography className={classes.chosenItemsPrice}>
             {displayPriceInDollars(chosenItemsLowPrice)} to{" "}
             {displayPriceInDollars(chosenItemsHighPrice)}
           </Typography>
-        </p>
+        </div>
       </div>
     </div>
   );

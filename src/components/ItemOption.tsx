@@ -42,12 +42,23 @@ export const ItemOption: React.FC<Props> = (props) => {
   const isChosenItem = chosenItem && props.item.name === chosenItem.name;
 
   const onClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    dispatch({
-      type: "ADD_ITEM",
-      payload: props.item,
-    });
+    // If the selected item is not already chosen, this will add the item to the state.
+    if (!isChosenItem) {
+      dispatch({
+        type: "ADD_ITEM",
+        payload: props.item,
+      });
+      // If the selected item is already in the state, this will delete the item from the state.
+    } else {
+      dispatch({
+        type: "DELETE_ITEM",
+        payload: props.item,
+      });
+    }
   };
 
+  // If the item is selected, the background will change from white to gray
+  // to show which items have been selected.
   const className = isChosenItem ? classes.chosenButton : classes.button;
 
   return (
